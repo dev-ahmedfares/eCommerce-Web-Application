@@ -55,9 +55,9 @@ export default function ProductDetails({ title, price, quantity, id, max }:  TPr
       );
     });
 
-  const handleRating = (rating: number) => {
-    console.log(rating);
-  };
+  // const handleRating = (rating: number) => {
+  //   console.log(rating);
+  // };
 
   return (
     <div className={detailsParent}>
