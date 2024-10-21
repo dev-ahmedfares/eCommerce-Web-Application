@@ -52,7 +52,7 @@ export default function Orders() {
         <Modal.Body style={{ height: "400px" }} className="overflow-y-scroll ">
           <Row>
             {selectedProduct.map((item) => (
-              <Col md={6}>
+              <Col key={`${item.cat_prefix}${item.id}`} md={6}>
                 <div className="my-3 ">
                   <Product {...item} />
                 </div>
