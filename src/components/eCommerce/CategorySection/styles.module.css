@@ -1,0 +1,101 @@
+.btn {
+  text-decoration: none;
+  color: var(--primary);
+  letter-spacing: 1.2px;
+  font-size: 14px;
+}
+.btnActive {
+  color: var(--secondary) !important;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    color: var(--secondary) !important;
+}
+
+.dropdown > button {
+  letter-spacing: 1.4px;
+  font-size: 14px;
+}
+.dropdown > div {
+  background-color: var(--primary-light);
+  padding: 20px 15px;
+}
+
+.menu {
+  display: flex;
+
+  font-size: 14px;
+}
+
+.menu > div {
+  font-family: "Montserrat", sans-serif;
+  min-width: 150px;
+  font-size: 13px;
+}
+.menu > div button {
+  color: var(--secondary);
+  transition: all 0.2s ease;
+}
+
+.menu > div button:hover {
+  background-color: transparent;
+  color: white;
+}
+.menu > div > span {
+  font-weight: 400;
+  color: white;
+}
+
+.FilterActive {
+    color: white !important;
+  }
+  
+/* Hide and show category options */
+
+.categoryStyle {
+  display: none;
+}
+.categoryList {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 992px) {
+  .categoryStyle {
+    display: block;
+  }
+  .categoryList {
+    display: none;
+  }
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.pagination ul {
+  margin: 0;
+}
+
+.pagination ul li a {
+  border: none;
+  color: var(--secondary);
+  font-size:16px;
+}
+.pagination ul li a:hover {
+  background-color: transparent;
+}
+.pagination ul li span {
+  font-size:18px;
+  color: var(--secondary) !important;
+  border: none;
+  background-color: transparent !important;
+}

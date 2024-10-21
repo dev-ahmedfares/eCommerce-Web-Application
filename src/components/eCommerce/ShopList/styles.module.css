@@ -1,0 +1,163 @@
+.parent {
+  display: flex;
+  gap: 20px;
+}
+
+.parent > div:first-child {
+  flex: 1;
+  min-height: 90vh;
+  max-width: 250px;
+}
+.canvasContainer {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .parent > div:first-child {
+    display: none;
+  }
+  .canvasContainer {
+    display: block;
+    max-width: 270px;
+  }
+}
+.parent > div:last-child {
+  flex: 3;
+}
+
+:where(.sidebar, .sidebarCanvas) div {
+  border: none !important;
+}
+
+:where(.sidebar, .sidebarCanvas) h2 button,
+:where(.sidebar, .sidebarCanvas) > div:last-child label {
+  background-color: transparent !important;
+  color: var(--primary-light) !important;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  box-shadow: none !important;
+  padding-bottom: 0 !important;
+}
+
+.parent .sidebar h2 button:after,
+.sidebarCanvas h2 button:after {
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+}
+
+.parent .sidebar ul,
+.sidebarCanvas ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.parent .sidebar ul button,
+.sidebarCanvas ul button {
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-200);
+}
+.parent .sidebar ul button:hover,
+.parent .sidebar ul button:active,
+.parent .sidebar ul button:focus,
+.sidebarCanvas ul button:hover,
+.sidebarCanvas ul button:active,
+.sidebarCanvas ul button:focus {
+  color: var(--primary-light);
+}
+
+.parent .sidebar > div:last-child,
+.sidebarCanvas > div:last-child {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+.parent .sidebar > div:last-child label,
+.sidebarCanvas > div:last-child label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.parent .sidebar > div:last-child div,
+.sidebarCanvas > div:last-child div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+.parent .sidebar > div:last-child > div button,
+.sidebarCanvas > div:last-child > div button {
+  color: var(--primary-light);
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 0;
+}
+
+/* category Body */
+.categoryBody > div:first-child > div p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+}
+.categoryBody > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.categoryBody > div:first-child > select {
+  max-width: 200px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  color: var(--secondary);
+
+  border-color: var(--secondary-light);
+}
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.pagination ul {
+  margin: 0;
+}
+
+.pagination ul li a {
+  border: none;
+  color: var(--secondary);
+  font-size:16px;
+}
+.pagination ul li a:hover {
+  background-color: transparent;
+}
+.pagination ul li span {
+  font-size:18px;
+  color: var(--secondary) !important;
+  border: none;
+  background-color: transparent !important;
+}
+
+/*  */
+.canvasContainer {
+  overflow-y: scroll;
+}
+
+.offCanvasBody {
+  margin-top: 15px;
+}
