@@ -1,7 +1,7 @@
 import Input from "@components/forms/Input/Input";
 import Heading from "@components/shared/Heading/Heading";
 import useLogin from "@hooks/useLogin";
-import { Alert, Button, Col, Form, Row, Spinner } from "react-bootstrap";
+import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import { Link, Navigate } from "react-router-dom";
 
 export default function Login() {
@@ -21,8 +21,8 @@ export default function Login() {
   }
 
   return (
-    <>
-      <Heading>User Login</Heading>
+    <Container fluid={"md"}>
+      <Heading style="text-center fs-3 my-5">User Login</Heading>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           {searchParams.get("message") === "account_created" && (
@@ -51,6 +51,7 @@ export default function Login() {
               error={errors.password?.message}
             />
 
+            <div className="text-end">
             <Button
               variant="primary"
               type="submit"
@@ -64,6 +65,7 @@ export default function Login() {
                 "Submit"
               )}
             </Button>
+            </div>
             <p className="my-4 text-center ">
               <span style={{color:"var(--primary)",fontWeight:"300"}}>Don't have an account?{" "}</span>
               <Link
@@ -85,6 +87,6 @@ export default function Login() {
           </Form>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 }

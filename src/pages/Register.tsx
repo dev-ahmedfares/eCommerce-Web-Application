@@ -1,5 +1,5 @@
 import Heading from "@components/shared/Heading/Heading";
-import { Alert, Button, Col, Form, Row, Spinner } from "react-bootstrap";
+import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import Input from "@components/forms/Input/Input";
 import { Link, Navigate } from "react-router-dom";
 import useRegister from "@hooks/useRegister";
@@ -22,8 +22,8 @@ export default function Register() {
   }
 
   return (
-    <>
-      <Heading>User Registration</Heading>
+    <Container fluid={"md"}>
+      <Heading style="text-center fs-3 my-5">User Registration</Heading>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <Form onSubmit={handleSubmit(onSubmit)}>
@@ -84,6 +84,7 @@ export default function Register() {
               error={errors.confirmPassword?.message}
             />
 
+            <div className="text-end">
             <Button
               variant="primary"
               type="submit"
@@ -96,9 +97,10 @@ export default function Register() {
                   <Spinner animation="border" size="sm" /> Loading...
                 </>
               ) : (
-                "Submit"
+                "Register"
               )}
             </Button>
+            </div>
             <p className="my-4 text-center ">
               <span style={{color:"var(--primary)",fontWeight:"300"}}>Already have an account?{" "}</span>
               <Link
@@ -120,6 +122,6 @@ export default function Register() {
           </Form>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 }

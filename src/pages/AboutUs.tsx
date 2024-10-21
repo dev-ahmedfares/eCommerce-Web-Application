@@ -2,6 +2,6 @@
 
 export default function AboutUs() {
   return (
-    <div>About</div>
+    <div className="fs-2 text-center mt-5">Website under Development, ✅⛔</div>
   )
 }
