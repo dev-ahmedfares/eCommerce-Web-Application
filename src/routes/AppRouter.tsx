@@ -6,7 +6,6 @@ import { lazy, Suspense } from "react";
 const MainLayout = lazy(() => import("@layouts/MainLayout/MainLayout"));
 const Home = lazy(() => import("@pages/Home"));
 const AboutUs = lazy(() => import("@pages/AboutUs"));
-const Categories = lazy(() => import("@pages/Categories"));
 const Cart = lazy(() => import("@pages/Cart"));
 const Wishlist = lazy(() => import("@pages/Wishlist"));
 const Register = lazy(() => import("@pages/Register"));
@@ -61,16 +60,7 @@ const router = createBrowserRouter([
             </PageSuspenseFallback>
           </ProtectedRoute>
         ),
-      },
-      {
-        path: "categories",
-        element: (
-          <PageSuspenseFallback>
-            <Categories />
-          </PageSuspenseFallback>
-        ),
-      },
-      {
+      },{
         path: "about-us",
         element: (
           <PageSuspenseFallback>

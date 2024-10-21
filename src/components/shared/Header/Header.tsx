@@ -49,9 +49,6 @@ export default function Header() {
                 <Nav.Link as={NavLink} to="/">
                   HOME
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="categories">
-                  CATEGORIES
-                </Nav.Link>
                 <Nav.Link as={NavLink} to="products">
                   PRODUCTS
                 </Nav.Link>
@@ -82,13 +79,13 @@ export default function Header() {
                     className={menu}
                   >
                     <NavDropdown.Item as={NavLink} to="profile" end>
-                      Profile
+                      PROFILE
                     </NavDropdown.Item>
                     <NavDropdown.Item as={NavLink} to="profile/orders">
-                      Orders
+                      MY ORDERS
                     </NavDropdown.Item>
                     <NavDropdown.Item as={NavLink} to="dashboard">
-                      Dashboard
+                      DASHBOARD
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item
@@ -96,7 +93,7 @@ export default function Header() {
                       to={"/"}
                       onClick={() => dispatch(authLogout())}
                     >
-                      Logout
+                      LOGOUT
                     </NavDropdown.Item>
                   </NavDropdown>
                 )}
@@ -123,9 +120,6 @@ export default function Header() {
                 <Nav>
                   <Nav.Link as={NavLink} to="/">
                     HOME
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} to="categories">
-                    CATEGORIES
                   </Nav.Link>
                   <Nav.Link as={NavLink} to="products">
                     PRODUCTS
